@@ -181,6 +181,24 @@ h2{font-family:var(--disp);font-weight:700;font-size:clamp(28px,3.2vw,40px);line
 @media(max-width:900px){.pt-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:540px){.pt-grid{grid-template-columns:1fr}}
 
+/* ---------- testimonials ---------- */
+.testimonials{border-top:1px solid var(--line)}
+.tm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);align-items:stretch}
+.tm{background:var(--bg);padding:32px 30px 30px;display:flex;flex-direction:column;transition:background .25s;position:relative}
+.tm:hover{background:var(--panel)}
+.tm::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.tm:hover::before{transform:scaleX(1)}
+.tm .th{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--faint);display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:18px}
+.tm:hover .th{color:var(--dim)}
+.tm .th .ok{color:var(--green)}
+.tm blockquote{color:var(--dim);font-size:14px;line-height:1.7;flex:1;margin:0}
+.tm blockquote::before{content:'"';color:var(--amber);font-family:var(--disp);font-size:26px;line-height:0;vertical-align:-8px;margin-right:2px}
+.tm blockquote::after{content:'"'}
+.tm .who{margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+.tm .who b{font-family:var(--disp);font-weight:600;font-size:15px;display:block;color:var(--text)}
+.tm .who span{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--faint)}
+@media(max-width:940px){.tm-grid{grid-template-columns:1fr}}
+
 /* ---------- about ---------- */
 .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
 .about p{color:var(--dim);font-size:16px;margin-bottom:18px}
